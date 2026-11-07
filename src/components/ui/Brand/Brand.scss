@@ -9,14 +9,9 @@
   letter-spacing: -0.02em;
 
   &__mark {
-    display: grid;
-    place-items: center;
     width: 2rem;
     height: 2rem;
-    border-radius: $radius-sm;
-    background: linear-gradient(145deg, #818cf8, $brand);
-    color: white;
-    font-size: 0.78rem;
+    border-radius: 25%;
     box-shadow: 0 8px 18px rgb(79 70 229 / 35%);
   }
 }

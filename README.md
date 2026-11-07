@@ -22,6 +22,7 @@ src/
   main.tsx                 Điểm khởi động, bọc LanguageProvider, nạp style chung
   App.tsx                  Ghép các khối của trang theo thứ tự
 
+  assets/brand/            Logo TeamFlow
   assets/icons/            Icon dạng .svg, mỗi icon một file; index.ts liệt kê tên
 
   components/
