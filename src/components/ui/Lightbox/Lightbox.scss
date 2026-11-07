@@ -1,0 +1,116 @@
+@use 'tokens' as *;
+@use 'mixins' as *;
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 2rem 4.5rem;
+  background: rgb(8 11 32 / 82%);
+  backdrop-filter: blur(6px);
+  animation: lightbox-in 180ms ease both;
+
+  @include below(md) {
+    padding: 1rem;
+  }
+
+  &__frame {
+    display: flex;
+    flex-direction: column;
+    max-width: min(1400px, 100%);
+    max-height: 100%;
+    overflow: hidden;
+    border-radius: $radius-md;
+    background: $surface;
+    box-shadow: 0 40px 80px rgb(0 0 0 / 45%);
+
+    .protected {
+      min-height: 0;
+    }
+
+    .protected img {
+      width: auto;
+      max-width: 100%;
+      max-height: calc(100vh - 8rem);
+      margin: 0 auto;
+      object-fit: contain;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0.75rem 0.75rem 1.1rem;
+    border-bottom: 1px solid $line;
+
+    small {
+      color: $muted;
+      font-weight: 600;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.6rem;
+    min-width: 0;
+
+    strong {
+      color: $brand-ink;
+    }
+
+    span {
+      color: $muted;
+      font-size: 0.92rem;
+    }
+  }
+
+  &__close {
+    @include bare-button;
+    @include icon-tile(2.25rem);
+
+    border-radius: 50%;
+    background: #f1f5f9;
+  }
+
+  &__nav {
+    @include bare-button;
+    @include icon-tile(3rem);
+
+    position: fixed;
+    top: 50%;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 14%);
+    color: white;
+    transform: translateY(-50%);
+
+    &:hover {
+      background: rgb(255 255 255 / 26%);
+    }
+
+    &--prev {
+      left: 1rem;
+    }
+
+    &--next {
+      right: 1rem;
+    }
+
+    @include below(md) {
+      top: auto;
+      bottom: 1rem;
+      transform: none;
+    }
+  }
+}
+
+@keyframes lightbox-in {
+  from {
+    opacity: 0;
+  }
+}

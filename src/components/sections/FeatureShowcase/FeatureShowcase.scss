@@ -1,0 +1,187 @@
+@use 'tokens' as *;
+@use 'mixins' as *;
+
+.showcase {
+  padding: 5rem 1.25rem;
+  scroll-margin-top: 48px;
+
+  @include below(sm) {
+    padding: 3.5rem 1rem;
+  }
+
+  &--tinted {
+    background: linear-gradient(180deg, $brand-soft 0%, $page 100%);
+  }
+
+  &__inner {
+    @include container;
+  }
+
+  &__head {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    max-width: 760px;
+    margin-bottom: 2.25rem;
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+    }
+
+    p {
+      margin: 0.5rem 0 0;
+      color: $muted;
+      font-size: 1.05rem;
+    }
+  }
+
+  &__number {
+    @include icon-tile(3rem);
+
+    border-radius: $radius-md;
+    background: $ink;
+    color: white;
+    font-weight: 700;
+
+    @include below(sm) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    gap: 2rem;
+    align-items: start;
+
+    @include below(lg) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__tabs {
+    position: sticky;
+    top: $header-height + 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    @include below(lg) {
+      position: static;
+      flex-direction: row;
+      overflow-x: auto;
+      padding-bottom: 0.25rem;
+      scrollbar-width: thin;
+    }
+  }
+
+  &__stage {
+    min-width: 0;
+    animation: showcase-in 280ms ease both;
+  }
+
+  &__copy {
+    margin-top: 1.5rem;
+
+    h3 {
+      margin: 0 0 1rem;
+      font-size: 1.35rem;
+      letter-spacing: -0.02em;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem 1.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      @include below(lg) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    li {
+      display: flex;
+      gap: 0.6rem;
+      color: $ink-soft;
+      font-size: 0.95rem;
+    }
+  }
+
+  &__check {
+    @include icon-tile(1.35rem);
+
+    margin-top: 0.1rem;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #15803d;
+  }
+}
+
+.showcase-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.95rem;
+  background: transparent;
+  color: $muted;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background 150ms ease,
+    border-color 150ms ease;
+
+  strong {
+    color: $ink;
+    font-size: 0.95rem;
+  }
+
+  span {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  &:hover {
+    background: rgb(255 255 255 / 70%);
+  }
+
+  &.is-active {
+    border-color: $brand-border;
+    background: $surface;
+    box-shadow:
+      inset 3px 0 0 $brand,
+      0 10px 24px -14px rgb(79 70 229 / 45%);
+
+    strong {
+      color: $brand-ink;
+    }
+  }
+
+  @include below(lg) {
+    flex: none;
+    max-width: 220px;
+
+    span {
+      display: none;
+    }
+
+    &.is-active {
+      box-shadow: inset 0 -3px 0 $brand;
+    }
+  }
+}
+
+@keyframes showcase-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}

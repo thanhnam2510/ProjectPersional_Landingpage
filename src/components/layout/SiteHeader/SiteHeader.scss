@@ -1,0 +1,91 @@
+@use 'tokens' as *;
+@use 'mixins' as *;
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 30;
+  border-bottom: 1px solid transparent;
+  color: white;
+  transition:
+    background 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease;
+
+  &--solid {
+    border-bottom-color: $line;
+    background: rgb(255 255 255 / 86%);
+    color: $ink;
+    backdrop-filter: blur(14px);
+  }
+
+  &__inner {
+    @include container;
+
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    height: $header-height;
+    padding-inline: 1.25rem;
+  }
+
+  &__nav {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    gap: 0.25rem;
+
+    a {
+      padding: 0.45rem 0.8rem;
+      border-radius: $radius-pill;
+      font-size: 0.9rem;
+      font-weight: 600;
+      opacity: 0.82;
+      transition:
+        background 150ms ease,
+        opacity 150ms ease;
+
+      &:hover {
+        background: rgb(255 255 255 / 12%);
+        opacity: 1;
+      }
+    }
+
+    @include below(lg) {
+      display: none;
+    }
+  }
+
+  &--solid &__nav a:hover {
+    background: $brand-soft;
+    color: $brand-ink;
+  }
+
+  &__tools {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    @include below(lg) {
+      margin-left: auto;
+    }
+  }
+
+  &__cta {
+    padding: 0.5rem 0.95rem;
+    border-radius: $radius-pill;
+    background: white;
+    color: $brand-ink;
+    font-size: 0.88rem;
+    font-weight: 700;
+
+    @media (max-width: 480px) {
+      display: none;
+    }
+  }
+
+  &--solid &__cta {
+    background: $brand;
+    color: white;
+  }
+}

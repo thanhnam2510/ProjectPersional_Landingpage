@@ -1,77 +1,46 @@
-import './App.css'
+import { useState } from 'react'
+import { BackToTop } from '@/components/layout/BackToTop'
+import { SiteFooter } from '@/components/layout/SiteFooter'
+import { SiteHeader } from '@/components/layout/SiteHeader'
+import { Audience } from '@/components/sections/Audience'
+import { Benefits } from '@/components/sections/Benefits'
+import { ContactBanner } from '@/components/sections/ContactBanner'
+import { FeatureAreas } from '@/components/sections/FeatureAreas'
+import { FeatureShowcase } from '@/components/sections/FeatureShowcase'
+import { Hero } from '@/components/sections/Hero'
+import { Lightbox } from '@/components/ui/Lightbox'
+import { chapters } from '@/content/chapters'
+import { chapterFeatures, featureById, tourFeatures } from '@/lib/tour'
+import type { Feature } from '@/types/content'
 
-const features = [
-  {
-    title: 'Công việc',
-    text: 'Dự án, Kanban, tiến độ và phụ thuộc task ở một chỗ.',
-  },
-  {
-    title: 'Tin nhắn',
-    text: 'Chat nhóm, gọi thoại, file và ảnh đã chia sẻ trong cuộc trò chuyện.',
-  },
-  {
-    title: 'Nghỉ phép',
-    text: 'Xin phép, số ngày phép năm và quản lý duyệt theo phòng ban.',
-  },
-  {
-    title: 'Diễn đàn',
-    text: 'Đăng hoạt động và thông báo công ty, bình luận, gắn thẻ, cảm xúc.',
-  },
-]
+const heroMain = featureById('home')
+const heroSide = featureById('feed')
 
 export default function App() {
+  const [zoomed, setZoomed] = useState<Feature | null>(null)
+
   return (
-    <div className="page">
-      <header className="nav">
-        <a className="brand" href="#top">
-          <span className="mark">tf</span>
-          TeamFlow
-        </a>
-        <nav>
-          <a href="#features">Tính năng</a>
-          <a href="#start">Bắt đầu</a>
-        </nav>
-      </header>
-
-      <main id="top">
-        <section className="hero">
-          <p className="eyebrow">Dành cho cả công ty</p>
-          <h1>Làm việc, nói chuyện và ra quyết định trên cùng một nơi.</h1>
-          <p className="lead">
-            TeamFlow gom công việc, tin nhắn, nghỉ phép và diễn đàn nội bộ. Quản lý theo phòng
-            ban, không chia quyền theo từng workspace rời.
-          </p>
-          <div className="actions">
-            <a className="primary" href="#start">
-              Xem cách chạy
-            </a>
-            <a className="ghost" href="#features">
-              Các phần chính
-            </a>
-          </div>
-        </section>
-
-        <section className="features" id="features">
-          {features.map((feature) => (
-            <article key={feature.title}>
-              <h2>{feature.title}</h2>
-              <p>{feature.text}</p>
-            </article>
-          ))}
-        </section>
-
-        <section className="start" id="start">
-          <h2>Chạy trang này</h2>
-          <pre>
-            <code>{`npm install\nnpm run dev\nnpm run build`}</code>
-          </pre>
-        </section>
+    <div id="top">
+      <SiteHeader />
+      <main>
+        <Hero main={heroMain} side={heroSide} onZoom={setZoomed} />
+        <FeatureAreas />
+        {chapters.map((chapter, index) => (
+          <FeatureShowcase
+            key={chapter.id}
+            chapter={chapter}
+            features={chapterFeatures[chapter.id]}
+            index={index}
+            onZoom={setZoomed}
+          />
+        ))}
+        <Audience />
+        <Benefits />
+        <ContactBanner />
       </main>
-
-      <footer>
-        <span>TeamFlow</span>
-        <span>Landing page</span>
-      </footer>
+      <SiteFooter />
+      <BackToTop />
+      <Lightbox features={tourFeatures} current={zoomed} onChange={setZoomed} />
     </div>
   )
 }

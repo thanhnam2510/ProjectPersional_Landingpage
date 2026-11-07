@@ -1,0 +1,62 @@
+@use 'tokens' as *;
+@use 'mixins' as *;
+
+.audience {
+  padding: 5.5rem 1.25rem 0;
+  background:
+    radial-gradient(700px 400px at 85% 0%, rgb(168 85 247 / 25%), transparent 60%),
+    $night;
+  color: white;
+
+  &__inner {
+    @include container;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2.5rem;
+
+    @include below(lg) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.audience-card {
+  @include glass-card;
+
+  &__icon {
+    @include icon-tile;
+
+    background: rgb(129 140 248 / 18%);
+    color: $brand-light;
+  }
+
+  h3 {
+    margin: 1.1rem 0 0.75rem;
+    font-size: 1.08rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: flex;
+    gap: 0.55rem;
+    color: #e0e7ff;
+    font-size: 0.95rem;
+
+    .icon {
+      margin-top: 0.2rem;
+      color: $success;
+    }
+  }
+}

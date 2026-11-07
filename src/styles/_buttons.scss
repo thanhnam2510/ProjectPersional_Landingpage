@@ -1,0 +1,47 @@
+@use 'tokens' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.25rem;
+  border-radius: $radius-pill;
+  font-weight: 700;
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease,
+    background 150ms ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  // White button on the dark hero.
+  &--light {
+    background: $surface;
+    color: $brand-ink;
+    box-shadow: 0 12px 30px -12px rgb(255 255 255 / 55%);
+  }
+
+  // Outline button on the dark hero.
+  &--ghost {
+    border: 1px solid rgb(255 255 255 / 28%);
+    color: white;
+
+    &:hover {
+      background: rgb(255 255 255 / 10%);
+    }
+  }
+
+  &--brand {
+    background: $brand;
+    color: white;
+    box-shadow: 0 14px 30px -14px rgb(79 70 229 / 70%);
+  }
+
+  &--outline {
+    border: 1px solid $brand-border;
+    background: $surface;
+    color: $brand-ink;
+  }
+}

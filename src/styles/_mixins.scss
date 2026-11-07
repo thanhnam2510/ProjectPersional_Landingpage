@@ -1,0 +1,43 @@
+@use 'sass:map';
+@use 'tokens' as *;
+
+/// Styles for screens narrower than the named breakpoint.
+@mixin below($name) {
+  @media (max-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+/// Centred column with the page's side padding.
+@mixin container($width: $content-width) {
+  max-width: $width;
+  margin-inline: auto;
+}
+
+/// Small square tile that holds an icon.
+@mixin icon-tile($size: 2.75rem) {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: $size;
+  height: $size;
+  border-radius: 0.9rem;
+}
+
+/// Card on the dark sections.
+@mixin glass-card {
+  padding: 1.5rem 1.35rem;
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: $radius-lg;
+  background: rgb(255 255 255 / 4%);
+}
+
+/// Removes the browser's button look.
+@mixin bare-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}

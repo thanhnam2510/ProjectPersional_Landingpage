@@ -1,0 +1,35 @@
+// Design tokens: colours, sizes, and breakpoints shared by every component.
+
+$ink: #0f172a;
+$ink-soft: #334155;
+$muted: #64748b;
+$line: #e2e8f0;
+$page: #f8fafc;
+$surface: #ffffff;
+
+$brand: #4f46e5;
+$brand-ink: #3730a3;
+$brand-soft: #eef2ff;
+$brand-border: #c7d2fe;
+$brand-light: #a5b4fc;
+
+$night: #0b1030;
+$night-2: #151a45;
+$success: #34d399;
+
+$content-width: 1200px;
+$header-height: 64px;
+
+$radius-sm: 0.65rem;
+$radius-md: 1rem;
+$radius-lg: 1.25rem;
+$radius-pill: 999px;
+
+$ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+$breakpoints: (
+  sm: 600px,
+  md: 760px,
+  lg: 960px,
+  xl: 1100px,
+);

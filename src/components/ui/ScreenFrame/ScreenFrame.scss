@@ -1,0 +1,92 @@
+@use 'tokens' as *;
+@use 'mixins' as *;
+
+.screen-frame {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgb(148 163 184 / 28%);
+  border-radius: $radius-md;
+  background: $surface;
+  box-shadow:
+    0 30px 60px -20px rgb(15 23 42 / 35%),
+    0 12px 24px -12px rgb(15 23 42 / 18%);
+
+  &__bar {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.6rem 0.85rem;
+    border-bottom: 1px solid #eef2f7;
+    background: $page;
+
+    span {
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 50%;
+
+      &:nth-child(1) {
+        background: #fb7185;
+      }
+
+      &:nth-child(2) {
+        background: #fbbf24;
+      }
+
+      &:nth-child(3) {
+        background: $success;
+      }
+    }
+
+    small {
+      margin-left: 0.5rem;
+      padding: 0.1rem 0.6rem;
+      border-radius: $radius-pill;
+      background: $surface;
+      color: #94a3b8;
+      font-size: 0.72rem;
+    }
+  }
+
+  &__image {
+    @include bare-button;
+
+    position: relative;
+    display: block;
+    width: 100%;
+    cursor: zoom-in;
+  }
+
+  &__zoom {
+    position: absolute;
+    right: 0.85rem;
+    bottom: 2.4rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: $radius-pill;
+    background: rgb(15 23 42 / 78%);
+    color: white;
+    font-size: 0.78rem;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(4px);
+    transition:
+      opacity 160ms ease,
+      transform 160ms ease;
+  }
+
+  &__image:hover &__zoom,
+  &__image:focus-visible &__zoom {
+    opacity: 1;
+    transform: none;
+  }
+
+  &--compact &__bar {
+    padding: 0.45rem 0.65rem;
+
+    small {
+      display: none;
+    }
+  }
+}

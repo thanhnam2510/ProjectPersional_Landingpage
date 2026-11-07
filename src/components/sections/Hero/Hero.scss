@@ -1,0 +1,122 @@
+@use 'tokens' as *;
+@use 'mixins' as *;
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 8.5rem 1.25rem 0;
+  background:
+    radial-gradient(900px 500px at 15% 0%, rgb(99 102 241 / 45%), transparent 60%),
+    radial-gradient(800px 480px at 90% 10%, rgb(168 85 247 / 32%), transparent 60%),
+    linear-gradient(180deg, $night 0%, $night-2 62%, $page 62%);
+  color: white;
+
+  @include below(md) {
+    padding-top: 6.5rem;
+    background:
+      radial-gradient(600px 400px at 10% 0%, rgb(99 102 241 / 45%), transparent 60%),
+      linear-gradient(180deg, $night 0%, $night-2 75%, $page 75%);
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 5.2vw, 4rem);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+  }
+
+  &__copy {
+    @include container(860px);
+
+    position: relative;
+    text-align: center;
+  }
+
+  &__lead {
+    max-width: 44rem;
+    margin: 1.25rem auto 0;
+    color: #c7d2fe;
+    font-size: 1.12rem;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 720px;
+    margin: 2.5rem auto 0;
+    border: 1px solid rgb(255 255 255 / 12%);
+    border-radius: 1.1rem;
+    background: rgb(255 255 255 / 5%);
+
+    div {
+      padding: 0.95rem 0.5rem;
+
+      & + div {
+        border-left: 1px solid rgb(255 255 255 / 10%);
+      }
+    }
+
+    dt {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    dd {
+      margin: 0.1rem 0 0;
+      color: $brand-light;
+      font-size: 0.82rem;
+    }
+
+    @include below(md) {
+      grid-template-columns: repeat(2, 1fr);
+
+      div:nth-child(3) {
+        border-left: 0;
+      }
+
+      div:nth-child(n + 3) {
+        border-top: 1px solid rgb(255 255 255 / 10%);
+      }
+    }
+  }
+
+  &__visual {
+    @include container(1080px);
+
+    position: relative;
+    margin-top: 3.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  &__main {
+    position: relative;
+    z-index: 1;
+    margin-right: 12%;
+
+    @include below(md) {
+      margin-right: 0;
+    }
+  }
+
+  &__side {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 2rem;
+    width: 38%;
+    transform: rotate(1.5deg);
+
+    @include below(md) {
+      display: none;
+    }
+  }
+}
