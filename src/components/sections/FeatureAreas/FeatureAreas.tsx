@@ -4,7 +4,7 @@ import { ui } from '@/content/ui'
 import { useLang } from '@/i18n'
 import './FeatureAreas.scss'
 
-/** Five cards, one per feature area, each linking to its showcase. */
+/** One card per feature area, each linking to its showcase. */
 export function FeatureAreas() {
   const { t } = useLang()
   return (

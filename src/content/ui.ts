@@ -5,26 +5,29 @@ import type { Copy } from '@/types/content'
 export const ui = {
   nav: [
     { href: '#work', label: { vi: 'Công việc', en: 'Work' } },
-    { href: '#together', label: { vi: 'Họp & chat', en: 'Meetings' } },
+    { href: '#together', label: { vi: 'Họp', en: 'Meetings' } },
     { href: '#leave', label: { vi: 'Nghỉ phép', en: 'Leave' } },
     { href: '#time', label: { vi: 'Giờ làm', en: 'Time' } },
     { href: '#org', label: { vi: 'Tổ chức', en: 'Organization' } },
     { href: '#people', label: { vi: 'Bảo mật', en: 'Security' } },
+    { href: '#performance', label: { vi: 'Đánh giá', en: 'Reviews' } },
+    { href: '#operations', label: { vi: 'Tài sản', en: 'Assets' } },
+    { href: '#budget', label: { vi: 'Ngân sách', en: 'Budgets' } },
   ] satisfies { href: string; label: Copy }[],
   cta: { vi: 'Liên hệ tư vấn', en: 'Talk to us' },
 
   headline: {
-    vi: 'Một nền tảng cho công việc, họp, nghỉ phép và giờ làm của cả công ty.',
-    en: 'One platform for your company’s work, meetings, leave, and hours.',
+    vi: 'Một nền tảng cho công việc, họp, nhân sự và vận hành của cả công ty.',
+    en: 'One platform for your company’s work, meetings, people, and operations.',
   },
   lead: {
-    vi: 'TeamFlow thay cho bảng tính chấm công, nhóm chat bên ngoài và đơn xin nghỉ trên giấy. Mỗi phòng ban làm việc theo đúng sơ đồ tổ chức, mọi yêu cầu đến đúng người duyệt.',
-    en: 'TeamFlow replaces timesheet spreadsheets, outside chat groups, and paper leave forms. Every department works to your org chart, and every request reaches the right approver.',
+    vi: 'TeamFlow thay cho bảng tính chấm công, nhóm chat bên ngoài, đơn từ giấy và sổ theo dõi thiết bị. Mỗi phòng ban làm việc theo đúng sơ đồ tổ chức, mọi yêu cầu và đánh giá đến đúng người.',
+    en: 'TeamFlow replaces timesheet spreadsheets, outside chat groups, paper forms, and device logbooks. Every department works to your org chart, and every request and review reaches the right person.',
   },
   primary: { vi: 'Xem tính năng', en: 'See the features' },
   secondary: { vi: 'Liên hệ tư vấn', en: 'Talk to us' },
   stats: [
-    { value: '6', label: { vi: 'nghiệp vụ trong một nền tảng', en: 'areas in one platform' } },
+    { value: '9', label: { vi: 'nghiệp vụ trong một nền tảng', en: 'areas in one platform' } },
     { value: '0', label: { vi: 'phần mềm cần cài thêm', en: 'extra apps to install' } },
     { value: 'VI · EN', label: { vi: 'tiếng Việt và tiếng Anh', en: 'Vietnamese and English' } },
     { value: '24/7', label: { vi: 'dùng trên trình duyệt', en: 'in any browser' } },
@@ -32,8 +35,8 @@ export const ui = {
 
   modulesEyebrow: { vi: 'Tính năng', en: 'Features' },
   modulesTitle: {
-    vi: 'Sáu nghiệp vụ chính, chọn một để xem chi tiết',
-    en: 'Six core areas — pick one to see it in action',
+    vi: 'Chín nghiệp vụ chính, chọn một để xem chi tiết',
+    en: 'Nine core areas — pick one to see it in action',
   },
   screens: { vi: 'tính năng', en: 'features' },
 
@@ -51,7 +54,7 @@ export const ui = {
       points: [
         { vi: 'Nhìn tiến độ mọi dự án trên một màn hình', en: 'Every project’s progress on one screen' },
         { vi: 'Biết đội nào quá tải, ai còn trống', en: 'See which team is overloaded and who has room' },
-        { vi: 'Đăng thông báo đến toàn công ty', en: 'Announce to the whole company' },
+        { vi: 'Nắm ngân sách dự án và kết quả đánh giá', en: 'Follow project budgets and review results' },
       ],
     },
     {
@@ -60,7 +63,7 @@ export const ui = {
       points: [
         { vi: 'Giao việc và theo dõi kế hoạch tuần của đội', en: 'Assign work and follow the team’s weekly plan' },
         { vi: 'Duyệt giờ làm và đơn nghỉ trong vài giây', en: 'Approve hours and leave in seconds' },
-        { vi: 'Họp đội trực tuyến ngay trên hệ thống', en: 'Run team meetings online in the system' },
+        { vi: 'Xử lý yêu cầu và đánh giá nhân viên', en: 'Handle requests and review their people' },
       ],
     },
     {
@@ -68,7 +71,7 @@ export const ui = {
       title: { vi: 'Nhân viên', en: 'Staff' },
       points: [
         { vi: 'Biết rõ hôm nay cần làm gì', en: 'Know exactly what to do today' },
-        { vi: 'Xin nghỉ, ghi giờ làm không cần giấy tờ', en: 'Request leave and log hours without paperwork' },
+        { vi: 'Xin nghỉ, gửi yêu cầu, ghi giờ không cần giấy tờ', en: 'Request leave, send requests, and log hours without paperwork' },
         { vi: 'Trao đổi, chia sẻ tài liệu ở một chỗ', en: 'Chat and share documents in one place' },
       ],
     },
@@ -105,8 +108,8 @@ export const ui = {
       icon: 'folder',
       title: { vi: 'Dữ liệu tập trung', en: 'Everything in one place' },
       text: {
-        vi: 'Công việc, tài liệu, tin nhắn, giờ làm và nghỉ phép nằm chung một hệ thống, được sao lưu tự động mỗi ngày.',
-        en: 'Work, documents, chat, hours, and leave live together in one system, backed up automatically every day.',
+        vi: 'Công việc, tài liệu, tin nhắn, giờ làm, nghỉ phép, tài sản và đánh giá nằm chung một hệ thống, được sao lưu tự động mỗi ngày.',
+        en: 'Work, documents, chat, hours, leave, assets, and reviews live together in one system, backed up automatically every day.',
       },
     },
   ] satisfies { icon: IconName; title: Copy; text: Copy }[],

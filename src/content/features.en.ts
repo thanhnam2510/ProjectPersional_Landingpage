@@ -362,4 +362,194 @@ export const featuresEn: Record<string, FeatureText> = {
       'The activity log is kept through a restore.',
     ],
   },
+  'perf-manager': {
+    kicker: 'Manager review',
+    title: 'Score each criterion, with clear weights',
+    points: [
+      'Rate every criterion 1–5 with a comment, right next to the self-assessment.',
+      'The total is worked out from the weights and how far the goals got.',
+      'Strengths, areas to improve, and a development plan on the same screen.',
+      'The reviewer follows your org chart.',
+    ],
+  },
+  'perf-self': {
+    kicker: 'Self-assessment',
+    title: 'Staff look back before their manager scores',
+    points: [
+      'Rate each criterion and sum up results and blockers.',
+      'Save a draft and edit freely before sending.',
+      'Set goals and key results for the cycle and update progress as you go.',
+      'Reminders before the deadline, so nobody forgets.',
+    ],
+  },
+  'perf-result': {
+    kicker: 'Results & history',
+    title: 'Clear results, open any time',
+    points: [
+      'Final score, rating, and the manager’s comments once HR signs off.',
+      'Self-assessment and manager scores side by side for each criterion.',
+      'Past cycles are always there to see progress over time.',
+      'Unfinished development items carry over to the next cycle.',
+    ],
+  },
+  'perf-cycle': {
+    kicker: 'Review cycles',
+    title: 'Monthly, quarterly, or yearly, step by step',
+    points: [
+      'Pick the departments, the self-assessment deadline, and the manager deadline.',
+      'See who has assessed themselves, who has been scored, and what awaits sign-off.',
+      'HR checks, adjusts scores with a reason, sends back, or signs off.',
+      'Change a reviewer or add people to the cycle when needed.',
+    ],
+  },
+  'perf-template': {
+    kicker: 'Review templates',
+    title: 'Criteria that fit each role',
+    points: [
+      'Criteria with a description and a scoring guide.',
+      'Weights for each criterion and for goals, always adding up to 100%.',
+      'Different templates for engineering, product, or sales.',
+      'Earlier cycles keep the template they ran with.',
+    ],
+  },
+  'perf-dashboard': {
+    kicker: 'Performance overview',
+    title: 'The whole company’s performance at a glance',
+    points: [
+      'Progress through each step of the cycle on one screen.',
+      'Rating distribution and average score per department.',
+      'Spot top performers and people who need support.',
+      'Export a spreadsheet for leadership.',
+    ],
+  },
+  'perf-360': {
+    kicker: '360° feedback',
+    title: 'Colleagues give honest, anonymous feedback',
+    points: [
+      'Managers or staff suggest colleagues to ask.',
+      'The person reviewed sees the feedback, not who wrote it.',
+      'Feedback is for reference and does not change the score.',
+      'Invitations and notifications when feedback is needed.',
+    ],
+  },
+  'request-new': {
+    kicker: 'New request',
+    title: 'No more messaging a manager directly',
+    points: [
+      'Pick a request type: equipment, access, reimbursement, design…',
+      'Fill in a ready-made form and attach a quote or invoice.',
+      'It goes straight to the right team and person.',
+      'Set a priority so urgent things are handled first.',
+    ],
+  },
+  requests: {
+    kicker: 'Handling requests',
+    title: 'Follow a request from sent to done',
+    points: [
+      'Accept, reject with a reason, assign to someone in the team, or mark done.',
+      'Turn a request into a project task in a few clicks.',
+      'The requester sees progress, history, and the conversation in the request.',
+      'A notification every time the status changes.',
+    ],
+  },
+  'request-templates': {
+    kicker: 'Request templates',
+    title: 'Managers build the forms for their team',
+    points: [
+      'Text, number, date, choice, or file fields.',
+      'Choose the receiving team and a default handler.',
+      'Reorder fields, mark them required, and add hints.',
+      'Turn a template off when it is no longer used; history stays.',
+    ],
+  },
+  assets: {
+    kicker: 'Asset inventory',
+    title: 'Which device, who has it, is it under warranty',
+    points: [
+      'Laptops, monitors, phones, and other devices, each with its own code.',
+      'Serial, price, vendor, warranty date, and location.',
+      'Filter by category or status, or search by holder.',
+      'Print QR labels for the whole inventory in one click.',
+    ],
+  },
+  'asset-detail': {
+    kicker: 'Asset record',
+    title: 'A device’s whole life in one place',
+    points: [
+      'Handovers, returns, maintenance, and audits over time.',
+      'Scan the QR code on the device to open its record.',
+      'Schedule maintenance and record its cost and result.',
+      'Dispose of it with a reason, date, and recovered value.',
+    ],
+  },
+  'asset-handover': {
+    kicker: 'Handover & return',
+    title: 'Handovers are confirmed, returns are checked',
+    points: [
+      'Pick the person, the date, the condition, and a return date.',
+      'Hand a device over straight from an equipment request.',
+      'On return, record the condition and send it for repair if damaged.',
+      'Locking a leaver’s account reminds you to collect their devices.',
+    ],
+  },
+  'my-assets': {
+    kicker: 'My assets',
+    title: 'Staff know what they are holding',
+    points: [
+      'The devices assigned to them, with condition and return date.',
+      'Confirm receipt with one click, timestamped.',
+      'See the request a device was issued for.',
+      'Reminders as the return date approaches.',
+    ],
+  },
+  'asset-alerts': {
+    kicker: 'Asset alerts',
+    title: 'No overdue returns or missed warranties',
+    points: [
+      'Alerts for expiring warranties, overdue returns, and due maintenance.',
+      'A list of devices to collect from leavers or overdue holders.',
+      'Asset managers are notified automatically.',
+      'Each alert is sent once, without nagging.',
+    ],
+  },
+  'asset-audit': {
+    kicker: 'Inventory audit',
+    title: 'Check what is really there against the system',
+    points: [
+      'Scan or mark each asset: present, missing, or with the wrong person.',
+      'See how many are checked and every mismatch.',
+      'Close the audit and update the records from its results.',
+      'Every audit is kept for later comparison.',
+    ],
+  },
+  budgets: {
+    kicker: 'Budgets',
+    title: 'See which project is about to overspend',
+    points: [
+      'Budget, spend, and percentage used for every project.',
+      'Warnings at 80% and when spending passes 100%.',
+      'Everything in VND, no conversions.',
+      'Leadership sees costs without spreadsheets.',
+    ],
+  },
+  'project-budget': {
+    kicker: 'Project costs',
+    title: 'Real cost from hours worked and other expenses',
+    points: [
+      'Labour cost from approved hours times the hourly rate.',
+      'Add software, equipment, and service costs to the project.',
+      'Monthly cost chart against the budget.',
+      'Project leads see totals, not each person’s pay.',
+    ],
+  },
+  'cost-rates': {
+    kicker: 'Hourly rates',
+    title: 'Rates by level or per person',
+    points: [
+      'Set rates for interns, probation, and full-time staff.',
+      'A personal rate takes priority.',
+      'Rates have start dates, so changes never rewrite past costs.',
+      'Recalculate costs for a period when needed.',
+    ],
+  },
 }

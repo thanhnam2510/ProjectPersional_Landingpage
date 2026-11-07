@@ -1,6 +1,6 @@
 import type { Chapter } from '@/types/content'
 
-/** The six feature areas, in page order. */
+/** The nine feature areas, in page order. */
 export const chapters: Chapter[] = [
   {
     id: 'work',
@@ -61,5 +61,35 @@ export const chapters: Chapter[] = [
       en: 'Bring new hires in one step, manage levels, see who did what with access, and never lose your data.',
     },
     featureIds: ['onboarding', 'invite', 'welcome', 'employment', 'security', 'audit', 'backups', 'restore'],
+  },
+  {
+    id: 'performance',
+    icon: 'chart',
+    title: { vi: 'Đánh giá hiệu suất', en: 'Performance reviews' },
+    summary: {
+      vi: 'Kỳ đánh giá tháng, quý, năm với bộ tiêu chí có trọng số: nhân viên tự đánh giá, quản lý chấm điểm, HR chốt kết quả.',
+      en: 'Monthly, quarterly, and yearly reviews with weighted criteria: staff assess themselves, managers score, HR signs off.',
+    },
+    featureIds: ['perf-manager', 'perf-self', 'perf-result', 'perf-cycle', 'perf-template', 'perf-dashboard', 'perf-360'],
+  },
+  {
+    id: 'operations',
+    icon: 'box',
+    title: { vi: 'Yêu cầu & tài sản', en: 'Requests & assets' },
+    summary: {
+      vi: 'Gửi yêu cầu đến đúng bộ phận và theo dõi đến khi xong; quản lý laptop, thiết bị từ lúc bàn giao đến khi thanh lý.',
+      en: 'Send requests to the right team and follow them to the end; track laptops and devices from handover to disposal.',
+    },
+    featureIds: ['request-new', 'requests', 'request-templates', 'assets', 'asset-detail', 'asset-handover', 'my-assets', 'asset-alerts', 'asset-audit'],
+  },
+  {
+    id: 'budget',
+    icon: 'wallet',
+    title: { vi: 'Ngân sách dự án', en: 'Project budgets' },
+    summary: {
+      vi: 'Chi phí thực tế của từng dự án từ giờ làm đã duyệt và chi phí khác, cảnh báo trước khi vượt ngân sách.',
+      en: 'The real cost of each project from approved hours and other expenses, with a warning before it runs over.',
+    },
+    featureIds: ['budgets', 'project-budget', 'cost-rates'],
   },
 ]
