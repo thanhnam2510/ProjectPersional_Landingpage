@@ -17,7 +17,25 @@ export type Feature = FeatureText & {
   image: string
 }
 
-/** A group of related features, shown as one showcase section. */
+/** A flagship feature near the top of the page: a product screen with a one-line benefit. */
+export type Highlight = {
+  featureId: string
+  chapterId: string
+  title: Copy
+  benefit: Copy
+}
+
+/** One step of the guided demo. */
+export type DemoStep = {
+  id: string
+  image: string
+  title: Copy
+  who: Copy
+  text: Copy
+  points: Copy[]
+}
+
+/** A group of related features, shown as one tab of the feature explorer. */
 export type Chapter = {
   id: string
   icon: IconName

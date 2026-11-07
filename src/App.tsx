@@ -5,12 +5,13 @@ import { SiteHeader } from '@/components/layout/SiteHeader'
 import { Audience } from '@/components/sections/Audience'
 import { Benefits } from '@/components/sections/Benefits'
 import { ContactBanner } from '@/components/sections/ContactBanner'
-import { FeatureAreas } from '@/components/sections/FeatureAreas'
-import { FeatureShowcase } from '@/components/sections/FeatureShowcase'
+import { DemoFlow } from '@/components/sections/DemoFlow'
+import { DemoVideo } from '@/components/sections/DemoVideo'
+import { FeatureExplorer } from '@/components/sections/FeatureExplorer'
 import { Hero } from '@/components/sections/Hero'
+import { Highlights } from '@/components/sections/Highlights'
 import { Lightbox } from '@/components/ui/Lightbox'
-import { chapters } from '@/content/chapters'
-import { chapterFeatures, featureById, tourFeatures } from '@/lib/tour'
+import { featureById, tourFeatures } from '@/lib/tour'
 import type { Feature } from '@/types/content'
 
 const heroMain = featureById('home')
@@ -24,16 +25,10 @@ export default function App() {
       <SiteHeader />
       <main>
         <Hero main={heroMain} side={heroSide} onZoom={setZoomed} />
-        <FeatureAreas />
-        {chapters.map((chapter, index) => (
-          <FeatureShowcase
-            key={chapter.id}
-            chapter={chapter}
-            features={chapterFeatures[chapter.id]}
-            index={index}
-            onZoom={setZoomed}
-          />
-        ))}
+        <Highlights onZoom={setZoomed} />
+        <DemoVideo />
+        <DemoFlow />
+        <FeatureExplorer onZoom={setZoomed} />
         <Audience />
         <Benefits />
         <ContactBanner />

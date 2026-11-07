@@ -7,7 +7,7 @@ import './Audience.scss'
 export function Audience() {
   const { t } = useLang()
   return (
-    <section className="audience">
+    <section className="audience" id="audience">
       <div className="audience__inner">
         <div className="section-head section-head--light">
           <p className="eyebrow">{t(ui.rolesEyebrow)}</p>

@@ -1,0 +1,234 @@
+@use 'tokens' as *;
+@use 'mixins' as *;
+
+.demo {
+  padding: 4.5rem 1.25rem;
+  background: linear-gradient(180deg, $brand-soft 0%, $page 100%);
+  scroll-margin-top: 48px;
+
+  @include below(sm) {
+    padding: 3.5rem 1rem;
+  }
+
+  &__inner {
+    @include container;
+  }
+
+  &__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.25rem;
+  }
+
+  &__lead {
+    margin: 0.6rem 0 0;
+    color: $muted;
+    font-size: 1.05rem;
+  }
+
+  &__controls {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__control {
+    @include bare-button;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1rem;
+    border: 1px solid $brand-border;
+    border-radius: $radius-pill;
+    background: $surface;
+    color: $brand-ink;
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    &:hover {
+      border-color: $brand;
+    }
+
+    &--primary {
+      border-color: $brand;
+      background: $brand;
+      color: white;
+    }
+  }
+
+  &__steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    margin: 2rem 0 1.5rem;
+    padding: 0;
+    list-style: none;
+
+    @include below(md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+  }
+
+  &__stage {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 2rem;
+    align-items: center;
+    animation: demo-in 280ms ease both;
+
+    @include below(lg) {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+  }
+
+  &__copy {
+    h3 {
+      margin: 0.25rem 0 0.6rem;
+      font-size: 1.6rem;
+      letter-spacing: -0.03em;
+    }
+
+    > p {
+      margin: 0;
+      color: $ink-soft;
+    }
+
+    ul {
+      display: grid;
+      gap: 0.6rem;
+      margin: 1.1rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      display: flex;
+      gap: 0.6rem;
+      color: $ink-soft;
+      font-size: 0.95rem;
+    }
+  }
+
+  &__who {
+    margin: 0;
+    color: $brand;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  &__check {
+    @include icon-tile(1.35rem);
+
+    margin-top: 0.1rem;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #15803d;
+  }
+}
+
+.demo-step {
+  @include bare-button;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  overflow: hidden;
+  border: 1px solid $line;
+  border-radius: $radius-md;
+  background: rgb(255 255 255 / 70%);
+  color: $muted;
+  text-align: left;
+  transition:
+    border-color 150ms ease,
+    background 150ms ease;
+
+  &:hover {
+    border-color: $brand-border;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $brand;
+    outline-offset: 2px;
+  }
+
+  &__number {
+    @include icon-tile(2rem);
+
+    border-radius: 50%;
+    background: $line;
+    color: $ink-soft;
+    font-weight: 700;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+
+    strong {
+      color: $ink;
+      font-size: 0.98rem;
+    }
+
+    small {
+      font-size: 0.8rem;
+    }
+  }
+
+  &__progress {
+    position: absolute;
+    inset: auto 0 0;
+    height: 3px;
+    background: $brand;
+    transform-origin: left;
+
+    // Kept under reduced motion too: the step only advances when this animation ends.
+    animation: demo-progress var(--duration) linear both !important;
+
+    &.is-paused {
+      animation-play-state: paused !important;
+    }
+  }
+
+  &.is-done &__number {
+    background: #dcfce7;
+    color: #15803d;
+  }
+
+  &.is-active {
+    border-color: $brand-border;
+    background: $surface;
+    box-shadow: 0 10px 24px -14px rgb(79 70 229 / 45%);
+
+    .demo-step__number {
+      background: $brand;
+      color: white;
+    }
+
+    strong {
+      color: $brand-ink;
+    }
+  }
+}
+
+@keyframes demo-progress {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes demo-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}

@@ -1,6 +1,6 @@
 import type { Chapter } from '@/types/content'
 
-/** The nine feature areas, in page order. */
+/** The nine feature areas, in the order of the feature explorer's tabs. */
 export const chapters: Chapter[] = [
   {
     id: 'work',
@@ -17,8 +17,8 @@ export const chapters: Chapter[] = [
     icon: 'chat',
     title: { vi: 'Họp & trao đổi', en: 'Meetings & chat' },
     summary: {
-      vi: 'Đặt lịch họp, họp trực tuyến, chat nội bộ và bảng tin công ty — không cần thêm phần mềm nào khác.',
-      en: 'Meeting scheduling, online meetings, company chat, and an internal feed — no extra software needed.',
+      vi: 'Đặt lịch họp, họp trực tuyến, chat nội bộ và bảng tin công ty ngay trên trình duyệt.',
+      en: 'Meeting scheduling, online meetings, company chat, and an internal feed, right in the browser.',
     },
     featureIds: ['calendar', 'room', 'messages', 'shared', 'feed', 'compose', 'notifications'],
   },
@@ -27,8 +27,8 @@ export const chapters: Chapter[] = [
     icon: 'leave',
     title: { vi: 'Nghỉ phép', en: 'Leave' },
     summary: {
-      vi: 'Nhân viên xin nghỉ trong một phút, trưởng phòng duyệt ngay, nhân sự nắm phép năm của cả công ty.',
-      en: 'Staff request leave in a minute, managers approve right away, and HR sees everyone’s balance.',
+      vi: 'Nhân viên gửi đơn nghỉ trực tuyến, trưởng phòng duyệt trên cùng hệ thống, nhân sự theo dõi phép năm của cả công ty.',
+      en: 'Staff request leave online, managers approve it in the same system, and HR follows everyone’s annual leave.',
     },
     featureIds: ['leaves', 'leave-accrual', 'leave-manage', 'leave-approvals'],
   },
@@ -57,8 +57,8 @@ export const chapters: Chapter[] = [
     icon: 'shield',
     title: { vi: 'Nhân sự & bảo mật', en: 'People & security' },
     summary: {
-      vi: 'Đón nhân viên mới trong một bước, quản lý cấp bậc, biết ai làm gì với quyền truy cập, và không bao giờ mất dữ liệu.',
-      en: 'Bring new hires in one step, manage levels, see who did what with access, and never lose your data.',
+      vi: 'Đón nhân viên mới trong một bước, quản lý cấp bậc, xem nhật ký thao tác quan trọng, sao lưu hằng ngày và khôi phục khi cần.',
+      en: 'Bring new hires in one step, manage levels, review a log of key actions, back up daily, and restore when needed.',
     },
     featureIds: ['onboarding', 'invite', 'welcome', 'employment', 'security', 'audit', 'backups', 'restore'],
   },

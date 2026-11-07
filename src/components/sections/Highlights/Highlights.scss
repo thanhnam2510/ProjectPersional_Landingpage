@@ -1,0 +1,91 @@
+@use 'tokens' as *;
+@use 'mixins' as *;
+
+.highlights {
+  @include container;
+
+  padding: 4.5rem 1.25rem 3rem;
+  scroll-margin-top: 48px;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 2rem;
+
+    @include below(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    // One swipeable row on phones instead of six stacked cards.
+    @include below(sm) {
+      display: flex;
+      margin-inline: -1rem;
+      padding: 0 1rem 0.75rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: thin;
+    }
+  }
+}
+
+.highlight-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid $line;
+  border-radius: $radius-lg;
+  background: $surface;
+  box-shadow: 0 1px 2px rgb(15 23 42 / 4%);
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+
+  &:hover {
+    border-color: $brand-border;
+    box-shadow: 0 18px 36px -20px rgb(79 70 229 / 35%);
+  }
+
+  @include below(sm) {
+    flex: none;
+    width: 82%;
+    scroll-snap-align: start;
+  }
+
+  .screen-frame {
+    border-width: 0 0 1px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  &__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.45rem;
+    padding: 1.1rem 1.2rem 1.2rem;
+
+    h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      flex: 1;
+      margin: 0;
+      color: $muted;
+      font-size: 0.92rem;
+    }
+  }
+
+  &__more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.35rem;
+    color: $brand;
+    font-size: 0.88rem;
+    font-weight: 700;
+  }
+}

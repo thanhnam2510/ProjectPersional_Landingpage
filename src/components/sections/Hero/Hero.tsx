@@ -20,9 +20,9 @@ export function Hero({ main, side, onZoom }: HeroProps) {
         <h1>{t(ui.headline)}</h1>
         <p className="hero__lead">{t(ui.lead)}</p>
         <div className="hero__actions">
-          <a className="button button--light" href="#features">
+          <a className="button button--light" href="#demo">
+            <Icon name="play" size={18} />
             {t(ui.primary)}
-            <Icon name="arrow-right" size={18} />
           </a>
           <a className="button button--ghost" href="#contact">
             {t(ui.secondary)}

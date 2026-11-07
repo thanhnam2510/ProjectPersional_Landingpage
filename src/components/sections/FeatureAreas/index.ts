@@ -1,1 +1,0 @@
-export { FeatureAreas } from './FeatureAreas'

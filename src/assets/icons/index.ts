@@ -5,6 +5,7 @@ import box from './box.svg'
 import chart from './chart.svg'
 import chat from './chat.svg'
 import check from './check.svg'
+import chevronDown from './chevron-down.svg'
 import chevronLeft from './chevron-left.svg'
 import chevronRight from './chevron-right.svg'
 import clock from './clock.svg'
@@ -13,6 +14,8 @@ import folder from './folder.svg'
 import globe from './globe.svg'
 import leave from './leave.svg'
 import org from './org.svg'
+import pause from './pause.svg'
+import play from './play.svg'
 import shield from './shield.svg'
 import tasks from './tasks.svg'
 import wallet from './wallet.svg'
@@ -27,6 +30,7 @@ export const icons = {
   chart,
   chat,
   check,
+  'chevron-down': chevronDown,
   'chevron-left': chevronLeft,
   'chevron-right': chevronRight,
   clock,
@@ -35,6 +39,8 @@ export const icons = {
   globe,
   leave,
   org,
+  pause,
+  play,
   shield,
   tasks,
   wallet,

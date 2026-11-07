@@ -1,6 +1,5 @@
+import { screen } from '@/lib/screen'
 import type { Feature } from '@/types/content'
-
-const screen = (name: string) => `${import.meta.env.BASE_URL}images/screens/${name}.jpg`
 
 /** Every product screen, with its Vietnamese text. English lives in `features.en.ts`. */
 export const features: Feature[] = [
@@ -236,11 +235,11 @@ export const features: Feature[] = [
     id: 'leave-accrual',
     image: screen('leave-accrual'),
     kicker: 'Phép năm tích lũy',
-    title: 'Phép năm cộng dần theo tháng, đúng luật',
+    title: 'Phép năm cộng dần theo tháng',
     points: [
-      'Nhân viên chính thức bắt đầu từ 0 ngày, cuối mỗi tháng được cộng thêm.',
-      'Thực tập và thử việc chưa có phép năm; hệ thống tự chặn đơn sai loại.',
-      'Nhân sự bên ngoài không tính vào quỹ phép của công ty.',
+      'Phép năm được cộng dần vào cuối mỗi tháng, tính từ ngày chính thức ghi trong hồ sơ.',
+      'Cấp bậc và loại nhân sự trong hồ sơ quyết định ai đang tích lũy phép năm.',
+      'Đơn phép năm vượt số ngày được hưởng bị chặn và báo rõ lý do.',
       'Mỗi người thấy rõ đã tích lũy bao nhiêu, còn được xin bao nhiêu.',
     ],
   },
@@ -383,7 +382,7 @@ export const features: Feature[] = [
     title: 'Thực tập, thử việc, chính thức, đối tác',
     points: [
       'Đổi cấp bậc khi nhân viên qua thử việc chỉ với vài lần bấm.',
-      'Ghi ngày chính thức để phép năm tính đúng từ tháng đó.',
+      'Ghi ngày chính thức làm mốc tính phép năm.',
       'Phân biệt nhân viên nội bộ và nhân sự bên ngoài.',
       'Trưởng phòng cập nhật được cho người trong phòng mình.',
     ],
@@ -392,11 +391,11 @@ export const features: Feature[] = [
     id: 'security',
     image: screen('security'),
     kicker: 'Trung tâm bảo mật',
-    title: 'Nhìn một màn hình là biết hệ thống có an toàn',
+    title: 'Các tín hiệu bảo mật quan trọng trên một màn hình',
     points: [
       'Số lượt đăng nhập và đăng nhập sai trong 24 giờ qua.',
       'Cảnh báo địa chỉ dò mật khẩu, tài khoản bị khóa, lời mời chưa dùng.',
-      'Danh sách ban giám đốc và mọi thay đổi quyền gần đây.',
+      'Danh sách ban giám đốc và các thay đổi quyền gần đây.',
       'Biết ngay lần sao lưu gần nhất là khi nào.',
     ],
   },
@@ -416,11 +415,11 @@ export const features: Feature[] = [
     id: 'backups',
     image: screen('backups'),
     kicker: 'Sao lưu',
-    title: 'Dữ liệu được sao lưu tự động mỗi đêm',
+    title: 'Sao lưu tự động hằng ngày để giảm rủi ro mất dữ liệu',
     points: [
-      'Công việc, tin nhắn, nghỉ phép, giờ làm và mọi tệp đính kèm trong một bản.',
-      'Tự động mỗi ngày, giữ lại các bản gần nhất, sao lưu thêm bất cứ lúc nào.',
-      'Tải bản sao lưu về để cất giữ ở nơi khác.',
+      'Mỗi bản gồm cơ sở dữ liệu và tệp đính kèm, ảnh đại diện.',
+      'Mặc định chạy lúc 02:00 mỗi ngày và giữ 14 bản tự động gần nhất; có thể sao lưu thủ công khi cần.',
+      'Tải bản sao lưu về để cất thêm một bản ở nơi khác, phòng khi máy chủ gặp sự cố.',
       'Thấy rõ dung lượng và chỗ trống còn lại.',
     ],
   },
@@ -428,12 +427,12 @@ export const features: Feature[] = [
     id: 'restore',
     image: screen('restore'),
     kicker: 'Khôi phục',
-    title: 'Có sự cố thì đưa dữ liệu về như cũ',
+    title: 'Có thể khôi phục về một bản sao lưu',
     points: [
-      'Chọn một bản sao lưu và khôi phục toàn bộ dữ liệu.',
-      'Phải xác nhận rõ ràng, không thể bấm nhầm.',
-      'Tự lưu lại dữ liệu hiện tại trước, nên luôn hoàn tác được.',
-      'Nhật ký hoạt động được giữ nguyên sau khi khôi phục.',
+      'Chọn một bản sao lưu để đưa dữ liệu về thời điểm đó.',
+      'Phải gõ xác nhận trước khi chạy; trong lúc khôi phục, hệ thống tạm dừng các thao tác khác.',
+      'Trước khi khôi phục, hệ thống tạo thêm một bản sao lưu để có thể quay lại nếu cần.',
+      'Nhật ký bảo mật ghi sau thời điểm sao lưu vẫn được giữ lại.',
     ],
   },
   {
