@@ -1,6 +1,6 @@
 import type { Chapter } from '@/types/content'
 
-/** The five feature areas, in page order. */
+/** The six feature areas, in page order. */
 export const chapters: Chapter[] = [
   {
     id: 'work',
@@ -30,7 +30,7 @@ export const chapters: Chapter[] = [
       vi: 'Nhân viên xin nghỉ trong một phút, trưởng phòng duyệt ngay, nhân sự nắm phép năm của cả công ty.',
       en: 'Staff request leave in a minute, managers approve right away, and HR sees everyone’s balance.',
     },
-    featureIds: ['leaves', 'leave-manage', 'leave-approvals'],
+    featureIds: ['leaves', 'leave-accrual', 'leave-manage', 'leave-approvals'],
   },
   {
     id: 'time',
@@ -51,5 +51,15 @@ export const chapters: Chapter[] = [
       en: 'The org chart decides who approves whom; project groups per client; control over staff accounts.',
     },
     featureIds: ['departments', 'workspaces', 'workspace', 'admin'],
+  },
+  {
+    id: 'people',
+    icon: 'shield',
+    title: { vi: 'Nhân sự & bảo mật', en: 'People & security' },
+    summary: {
+      vi: 'Đón nhân viên mới trong một bước, quản lý cấp bậc, biết ai làm gì với quyền truy cập, và không bao giờ mất dữ liệu.',
+      en: 'Bring new hires in one step, manage levels, see who did what with access, and never lose your data.',
+    },
+    featureIds: ['onboarding', 'invite', 'welcome', 'employment', 'security', 'audit', 'backups', 'restore'],
   },
 ]

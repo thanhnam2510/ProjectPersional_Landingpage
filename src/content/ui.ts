@@ -9,6 +9,7 @@ export const ui = {
     { href: '#leave', label: { vi: 'Nghỉ phép', en: 'Leave' } },
     { href: '#time', label: { vi: 'Giờ làm', en: 'Time' } },
     { href: '#org', label: { vi: 'Tổ chức', en: 'Organization' } },
+    { href: '#people', label: { vi: 'Bảo mật', en: 'Security' } },
   ] satisfies { href: string; label: Copy }[],
   cta: { vi: 'Liên hệ tư vấn', en: 'Talk to us' },
 
@@ -23,7 +24,7 @@ export const ui = {
   primary: { vi: 'Xem tính năng', en: 'See the features' },
   secondary: { vi: 'Liên hệ tư vấn', en: 'Talk to us' },
   stats: [
-    { value: '5', label: { vi: 'nghiệp vụ trong một nền tảng', en: 'areas in one platform' } },
+    { value: '6', label: { vi: 'nghiệp vụ trong một nền tảng', en: 'areas in one platform' } },
     { value: '0', label: { vi: 'phần mềm cần cài thêm', en: 'extra apps to install' } },
     { value: 'VI · EN', label: { vi: 'tiếng Việt và tiếng Anh', en: 'Vietnamese and English' } },
     { value: '24/7', label: { vi: 'dùng trên trình duyệt', en: 'in any browser' } },
@@ -31,8 +32,8 @@ export const ui = {
 
   modulesEyebrow: { vi: 'Tính năng', en: 'Features' },
   modulesTitle: {
-    vi: 'Năm nghiệp vụ chính, chọn một để xem chi tiết',
-    en: 'Five core areas — pick one to see it in action',
+    vi: 'Sáu nghiệp vụ chính, chọn một để xem chi tiết',
+    en: 'Six core areas — pick one to see it in action',
   },
   screens: { vi: 'tính năng', en: 'features' },
 
@@ -80,8 +81,8 @@ export const ui = {
       icon: 'shield',
       title: { vi: 'Đúng người, đúng quyền', en: 'The right access for each role' },
       text: {
-        vi: 'Phân quyền theo phòng ban. Mỗi người chỉ thấy và duyệt những gì thuộc phạm vi của mình.',
-        en: 'Access follows your departments. People only see and approve what is theirs to handle.',
+        vi: 'Phân quyền theo phòng ban, mỗi người chỉ thấy và duyệt những gì thuộc phạm vi của mình. Mọi thay đổi quyền đều có nhật ký.',
+        en: 'Access follows your departments, so people only see and approve what is theirs. Every change of rights is logged.',
       },
     },
     {
@@ -104,8 +105,8 @@ export const ui = {
       icon: 'folder',
       title: { vi: 'Dữ liệu tập trung', en: 'Everything in one place' },
       text: {
-        vi: 'Công việc, tài liệu, tin nhắn, giờ làm và nghỉ phép nằm chung một hệ thống của công ty.',
-        en: 'Work, documents, chat, hours, and leave live together in the company’s own system.',
+        vi: 'Công việc, tài liệu, tin nhắn, giờ làm và nghỉ phép nằm chung một hệ thống, được sao lưu tự động mỗi ngày.',
+        en: 'Work, documents, chat, hours, and leave live together in one system, backed up automatically every day.',
       },
     },
   ] satisfies { icon: IconName; title: Copy; text: Copy }[],

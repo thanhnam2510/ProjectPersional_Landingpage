@@ -192,6 +192,16 @@ export const featuresEn: Record<string, FeatureText> = {
       'Approved leave stays approved, and the full history is kept.',
     ],
   },
+  'leave-accrual': {
+    kicker: 'Earned leave',
+    title: 'Annual leave that builds up month by month',
+    points: [
+      'Official staff start at zero and earn more at the end of every month.',
+      'Interns and people on probation have no annual leave; wrong requests are stopped.',
+      'People from outside the company are left out of the leave budget.',
+      'Everyone sees what they have earned and what they can still ask for.',
+    ],
+  },
   'leave-manage': {
     kicker: 'Annual leave',
     title: 'Everyone’s annual leave on one table',
@@ -270,6 +280,86 @@ export const featuresEn: Record<string, FeatureText> = {
       'Lock the account of someone who has left right away.',
       'Grant or remove leadership access.',
       'Only leadership can open this screen.',
+    ],
+  },
+  onboarding: {
+    kicker: 'New employees',
+    title: 'Welcome a new hire with one form',
+    points: [
+      'Account, department, job title, level, and access in one step.',
+      'Pick the department and the project groups they need are filled in.',
+      'Managers add people to their own department without waiting for HR.',
+      'Send the invitation by email, or copy the link to share another way.',
+    ],
+  },
+  invite: {
+    kicker: 'Invitations',
+    title: 'New hires choose their own password, safely',
+    points: [
+      'Invitation links work once and expire after 3 days.',
+      'The page shows the account, the department, and who invited them.',
+      'Nobody sends passwords over chat or email.',
+      'Forgot the password? People reset it themselves.',
+    ],
+  },
+  welcome: {
+    kicker: 'First day',
+    title: 'Day one, and they already know where they fit',
+    points: [
+      'Their department, manager, and project groups on one page.',
+      'The leave they have and how to ask for it.',
+      'What to do first: profile, work, meetings, the company feed.',
+      'The whole company welcomes them on the feed.',
+    ],
+  },
+  employment: {
+    kicker: 'Employment',
+    title: 'Interns, probation, official staff, partners',
+    points: [
+      'Change someone’s level when they pass probation in a few clicks.',
+      'Record the official date so leave is counted from that month.',
+      'Tell internal staff apart from people outside the company.',
+      'Managers keep it up to date for their own people.',
+    ],
+  },
+  security: {
+    kicker: 'Security center',
+    title: 'One screen to tell whether everything is safe',
+    points: [
+      'Sign-ins and failed sign-ins over the last 24 hours.',
+      'Warnings about password guessing, locked accounts, and unused invitations.',
+      'Who has leadership access, and every recent change of rights.',
+      'When the last backup was taken.',
+    ],
+  },
+  audit: {
+    kicker: 'Activity log',
+    title: 'Who did what, when, and from where',
+    points: [
+      'Sign-ins, password changes, access granted, accounts locked, people moved.',
+      'Each entry shows who, to whom, the address, and the device.',
+      'Filter by kind of event, person, date, or failures only.',
+      'Export to a spreadsheet for checks and audits.',
+    ],
+  },
+  backups: {
+    kicker: 'Backups',
+    title: 'Your data backed up automatically every night',
+    points: [
+      'Work, messages, leave, hours, and every attachment in one backup.',
+      'Every day on its own, keeping the latest ones, plus one whenever you want.',
+      'Download backups to keep a copy somewhere else.',
+      'See how much space they take and how much is left.',
+    ],
+  },
+  restore: {
+    kicker: 'Restore',
+    title: 'Something went wrong? Put the data back',
+    points: [
+      'Pick a backup and restore everything from it.',
+      'It must be confirmed on purpose; no accidental clicks.',
+      'The current data is saved first, so it can always be undone.',
+      'The activity log is kept through a restore.',
     ],
   },
 }
