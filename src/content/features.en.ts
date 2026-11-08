@@ -9,7 +9,7 @@ export const featuresEn: Record<string, FeatureText> = {
       'Open tasks, overdue work, today’s deadlines, and meeting invites on one screen.',
       'If a meeting is on, join the room straight from the first page.',
       'The next 7 days of meetings: accept or decline with one click.',
-      'Progress on every project you work on, always up to date.',
+      'Progress on every project you work on, updated automatically.',
     ],
   },
   search: {
@@ -34,7 +34,7 @@ export const featuresEn: Record<string, FeatureText> = {
   },
   notifications: {
     kicker: 'Notifications',
-    title: 'Never miss what matters',
+    title: 'Keep track of what matters',
     points: [
       'New assignments, meeting invites, and approved or returned hours all notify you.',
       'Mentions and replies to your comments arrive immediately.',
@@ -89,7 +89,7 @@ export const featuresEn: Record<string, FeatureText> = {
       'Day, week, or month view; the red line is today.',
       'Drag to reschedule, drag an edge to change the duration.',
       'See at once which project is late and which task is overdue.',
-      'Each project’s completion is always current.',
+      'Each project’s completion updates automatically.',
     ],
   },
   workspaces: {
@@ -119,7 +119,7 @@ export const featuresEn: Record<string, FeatureText> = {
       'Week or month view. Book a meeting and invite people in the company.',
       'See who is busy before you pick a time.',
       'Pending invites sit beside the calendar: accept or decline in one click.',
-      'Upcoming meetings are always on the right.',
+      'Upcoming meetings are shown on the right.',
     ],
   },
   room: {
@@ -197,7 +197,7 @@ export const featuresEn: Record<string, FeatureText> = {
     title: 'Annual leave that builds up month by month',
     points: [
       'Annual leave builds up at the end of each month, counted from the official date on file.',
-      'Each person’s level and employment type decide whether they are earning annual leave.',
+      'Annual leave entitlement follows each person’s level, employment type, and official date.',
       'Annual leave requests beyond what someone has earned are stopped, with the reason.',
       'Everyone sees what they have earned and what they can still ask for.',
     ],
@@ -344,7 +344,7 @@ export const featuresEn: Record<string, FeatureText> = {
   },
   backups: {
     kicker: 'Backups',
-    title: 'Daily automatic backups to reduce the risk of data loss',
+    title: 'Back up and help restore data, reducing the risk when something goes wrong',
     points: [
       'Each backup holds the database plus attachments and profile photos.',
       'Runs at 02:00 every day by default and keeps the 14 latest automatic backups; take one by hand when needed.',
@@ -388,7 +388,7 @@ export const featuresEn: Record<string, FeatureText> = {
     points: [
       'Final score, rating, and the manager’s comments once HR signs off.',
       'Self-assessment and manager scores side by side for each criterion.',
-      'Past cycles are always there to see progress over time.',
+      'Past cycles are kept to see progress over time.',
       'Unfinished development items carry over to the next cycle.',
     ],
   },
@@ -407,7 +407,7 @@ export const featuresEn: Record<string, FeatureText> = {
     title: 'Criteria that fit each role',
     points: [
       'Criteria with a description and a scoring guide.',
-      'Weights for each criterion and for goals, always adding up to 100%.',
+      'Weights for each criterion and for goals, which must add up to 100%.',
       'Different templates for engineering, product, or sales.',
       'Earlier cycles keep the template they ran with.',
     ],
@@ -548,7 +548,7 @@ export const featuresEn: Record<string, FeatureText> = {
     points: [
       'Set rates for interns, probation, and full-time staff.',
       'A personal rate takes priority.',
-      'Rates have start dates, so changes never rewrite past costs.',
+      'Rates have start dates, so changes do not rewrite past costs.',
       'Recalculate costs for a period when needed.',
     ],
   },

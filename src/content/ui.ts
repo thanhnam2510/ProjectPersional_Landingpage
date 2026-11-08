@@ -143,8 +143,8 @@ export const ui = {
       icon: 'folder',
       title: { vi: 'Dữ liệu tập trung', en: 'Everything in one place' },
       text: {
-        vi: 'Công việc, tài liệu, tin nhắn, giờ làm, nghỉ phép, tài sản và đánh giá nằm chung một hệ thống, có sao lưu tự động hằng ngày và khôi phục khi cần.',
-        en: 'Work, documents, chat, hours, leave, assets, and reviews live together in one system, with daily automatic backups and restore when needed.',
+        vi: 'Công việc, tài liệu, tin nhắn, giờ làm, nghỉ phép, tài sản và đánh giá nằm chung một hệ thống; sao lưu và hỗ trợ khôi phục dữ liệu, giảm rủi ro khi xảy ra sự cố.',
+        en: 'Work, documents, chat, hours, leave, assets, and reviews live together in one system, with backups and help restoring data to reduce the risk when something goes wrong.',
       },
     },
   ] satisfies { icon: IconName; title: Copy; text: Copy }[],

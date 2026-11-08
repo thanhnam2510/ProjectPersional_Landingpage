@@ -108,7 +108,7 @@ export const features: Feature[] = [
       'Xem theo ngày, tuần hoặc tháng; vạch đỏ là hôm nay.',
       'Kéo để dời lịch, kéo mép để đổi thời lượng công việc.',
       'Biết ngay dự án nào trễ, việc nào quá hạn.',
-      'Phần trăm hoàn thành của từng dự án luôn cập nhật.',
+      'Phần trăm hoàn thành của từng dự án tự cập nhật.',
     ],
   },
   {
@@ -144,7 +144,7 @@ export const features: Feature[] = [
       'Xem lịch theo tuần hoặc tháng, đặt họp và mời người trong công ty.',
       'Thấy ai đang bận trước khi chọn giờ.',
       'Lời mời chờ trả lời nằm ngay cạnh lịch, tham gia hoặc từ chối một lần bấm.',
-      'Cuộc họp sắp tới luôn hiện ở góc phải.',
+      'Cuộc họp sắp tới hiện ở góc phải.',
     ],
   },
   {
@@ -238,7 +238,7 @@ export const features: Feature[] = [
     title: 'Phép năm cộng dần theo tháng',
     points: [
       'Phép năm được cộng dần vào cuối mỗi tháng, tính từ ngày chính thức ghi trong hồ sơ.',
-      'Cấp bậc và loại nhân sự trong hồ sơ quyết định ai đang tích lũy phép năm.',
+      'Quyền phép năm xác định theo cấp bậc, loại nhân sự và ngày chính thức của từng người.',
       'Đơn phép năm vượt số ngày được hưởng bị chặn và báo rõ lý do.',
       'Mỗi người thấy rõ đã tích lũy bao nhiêu, còn được xin bao nhiêu.',
     ],
@@ -415,7 +415,7 @@ export const features: Feature[] = [
     id: 'backups',
     image: screen('backups'),
     kicker: 'Sao lưu',
-    title: 'Sao lưu tự động hằng ngày để giảm rủi ro mất dữ liệu',
+    title: 'Sao lưu và hỗ trợ khôi phục dữ liệu, giảm rủi ro khi xảy ra sự cố',
     points: [
       'Mỗi bản gồm cơ sở dữ liệu và tệp đính kèm, ảnh đại diện.',
       'Mặc định chạy lúc 02:00 mỗi ngày và giữ 14 bản tự động gần nhất; có thể sao lưu thủ công khi cần.',
@@ -467,7 +467,7 @@ export const features: Feature[] = [
     points: [
       'Điểm cuối, xếp loại và nhận xét của quản lý sau khi HR chốt.',
       'So sánh tự đánh giá với đánh giá của quản lý theo từng tiêu chí.',
-      'Lịch sử các kỳ trước luôn sẵn để theo dõi sự tiến bộ.',
+      'Lịch sử các kỳ trước được lưu lại để theo dõi sự tiến bộ.',
       'Kế hoạch phát triển chưa xong tự chuyển sang kỳ sau.',
     ],
   },
@@ -490,7 +490,7 @@ export const features: Feature[] = [
     title: 'Bộ tiêu chí riêng cho từng vị trí',
     points: [
       'Tạo tiêu chí kèm mô tả và hướng dẫn chấm điểm.',
-      'Đặt trọng số cho từng tiêu chí và phần mục tiêu, tổng luôn bằng 100%.',
+      'Đặt trọng số cho từng tiêu chí và phần mục tiêu, tổng phải bằng 100%.',
       'Dùng mẫu khác nhau cho kỹ thuật, sản phẩm hay kinh doanh.',
       'Mẫu cũ vẫn giữ nguyên cho các kỳ đã chạy.',
     ],

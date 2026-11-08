@@ -27,8 +27,8 @@ export const chapters: Chapter[] = [
     icon: 'leave',
     title: { vi: 'Nghỉ phép', en: 'Leave' },
     summary: {
-      vi: 'Nhân viên gửi đơn nghỉ trực tuyến, trưởng phòng duyệt trên cùng hệ thống, nhân sự theo dõi phép năm của cả công ty.',
-      en: 'Staff request leave online, managers approve it in the same system, and HR follows everyone’s annual leave.',
+      vi: 'Nhân viên gửi đơn nghỉ trực tuyến, trưởng phòng duyệt trên cùng hệ thống, nhân sự quản lý phép năm theo chính sách và quy định áp dụng.',
+      en: 'Staff request leave online, managers approve it in the same system, and HR manages annual leave according to the applicable policies and rules.',
     },
     featureIds: ['leaves', 'leave-accrual', 'leave-manage', 'leave-approvals'],
   },
@@ -57,8 +57,8 @@ export const chapters: Chapter[] = [
     icon: 'shield',
     title: { vi: 'Nhân sự & bảo mật', en: 'People & security' },
     summary: {
-      vi: 'Đón nhân viên mới trong một bước, quản lý cấp bậc, xem nhật ký thao tác quan trọng, sao lưu hằng ngày và khôi phục khi cần.',
-      en: 'Bring new hires in one step, manage levels, review a log of key actions, back up daily, and restore when needed.',
+      vi: 'Đón nhân viên mới trong một bước, quản lý cấp bậc, xem nhật ký thao tác quan trọng; sao lưu và hỗ trợ khôi phục dữ liệu, giảm rủi ro khi xảy ra sự cố.',
+      en: 'Bring new hires in one step, manage levels, and review a log of key actions; back up and help restore data to reduce the risk when something goes wrong.',
     },
     featureIds: ['onboarding', 'invite', 'welcome', 'employment', 'security', 'audit', 'backups', 'restore'],
   },
